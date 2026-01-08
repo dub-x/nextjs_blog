@@ -58,6 +58,5 @@ export const getStaticProps = async ({ params }) => {
   const { img, data } = await API.getCurrentData("users", params.id);
   return {
     props: { user: { ...data, img: { ...img } } },
-    revalidate: 10000,
   };
 };
